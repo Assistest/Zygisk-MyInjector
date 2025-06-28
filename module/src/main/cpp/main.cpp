@@ -46,8 +46,7 @@ public:
             JavaVM *vm = nullptr;
             if (env->GetJavaVM(&vm) == JNI_OK) {
                 // Then start hack thread with JavaVM
-                std::thread hack_thread(hack_prepare, _data_dir, _package_name, data, length, vm);
-                hack_thread.detach();
+                hack_prepare(_data_dir, _package_name, data, length, vm);
             } else {
                 LOGE("Failed to get JavaVM");
             }
