@@ -9,6 +9,7 @@
 #include <unistd.h>
 #include <sys/stat.h>
 #include <errno.h>
+#include <thread>
 #include <jni.h>
 
 // External function from newriruhide.cpp
