@@ -9,8 +9,10 @@
 #include <unistd.h>
 #include <sys/stat.h>
 #include <errno.h>
-#include <thread>
-#include <jni.h>
+#include <cstdlib>
+#include <android/log.h>
+#include <sstream>
+#include <dirent.h>
 
 // External function from newriruhide.cpp
 extern "C" void riru_hide(const char *name);
